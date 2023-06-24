@@ -24,4 +24,4 @@ run-windows-command:
       run: Get-Location
     - name: Directory Path
       run: pwd
-      shell: bash
+      shell: bash 
