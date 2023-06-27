@@ -1,7 +1,10 @@
 name: PBB Actions Workflow 
 
 on: 
-  push:
+  schedule: 
+    - cron: "0/5 * * * * "
+    - cron: "0/6 * * * * "
+  #push:
   pull_request: 
      types: [open, closed, assigned, reopened]
 
