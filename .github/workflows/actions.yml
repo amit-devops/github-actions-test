@@ -1,12 +1,29 @@
 name: PBB Actions Workflow 
 
 on: 
-  schedule: 
-    - cron: "0/5 * * * * "
-    - cron: "0/6 * * * * "
+
+  push: 
+    #  branches:
+    #    - main
+      #  - 'develop/*'
+      #  - 'develop/**'
+      #  - '!develop/devC'
+      # tags: 
+      #   - v1.*
+      # paths:
+      #   - '**.js'
+      
+      # paths-ignore:
+      #   - 'docs/**'
+
+
+#  schedule: 
+ #   - cron: "* * * * * "
+  #  - cron: "* * * * * "
   #push:
-  pull_request: 
-     types: [open, closed, assigned, reopened]
+  #pull_request: 
+   #  types: [open, closed, assigned, reopened]
+
 
 jobs:         
   run-github-actions:
