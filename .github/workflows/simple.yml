@@ -1,6 +1,6 @@
 name: PBB shell commands
 
-on: [pull_request] #[push] 
+on: [push] #[pull_request] 
 
 jobs:         
   run-shell-command:
@@ -20,7 +20,24 @@ jobs:
   run-windows-command:
     runs-on: windows-latest
     needs: [run-shell-command]
-    steps:
+    steps:log-default-env:
+#   runs-on: ubuntu-latest
+#   steps:
+#     - name: Default ENV Variables 
+#       run: |
+#         echo "HOME: ${HOME}"
+#         echo "GITHUB_WORKFLOW: ${GITHUB_WORKFLOW}"
+#         echo "GITHUB_ACTION: ${GITHUB_ACTION}"
+#         echo "GITHUB_ACTIONS: ${GITHUB_ACTIONS}"
+#         echo "GITHUB_ACTOR: ${GITHUB_ACTOR}"
+#         echo "GITHUB_REPOSITORY: ${GITHUB_REPOSITORY}"
+#         echo "GITHUB_EVENT_NAME: ${GITHUB_EVENT_NAME}"
+#         echo "GITHUB_WORKSPACE: ${GITHUB_WORKSPACE}"
+#         echo "GITHUB_SHA: ${GITHUB_SHA}"
+#         echo "GITHUB_REF: ${GITHUB_REF}"
+#         echo "WF_ENV: ${WF_ENV}"
+#         echo "JOB_ENV: ${JOB_ENV}"
+#         echo "STEP_ENV: ${STEP_ENV}"
       - name: Directory PowerShell
         run: Get-Location
       - name: Directory Path
