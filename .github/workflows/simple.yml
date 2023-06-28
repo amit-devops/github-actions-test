@@ -1,6 +1,6 @@
 name: PBB shell commands
 
-on: [pull_request] #[push] 
+on: [push] 
 
 jobs:         
   run-shell-command:
