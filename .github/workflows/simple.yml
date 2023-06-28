@@ -1,7 +1,7 @@
 name: PBB shell commands
 
-on: [push] #[pull_request] 
-
+on: #[push] #[pull_request] 
+  push: 
 jobs:         
   run-shell-command:
     runs-on: ubuntu-latest
