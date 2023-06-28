@@ -1,6 +1,7 @@
 name: PBB Actions Workflow 
 
 on: 
+
   push: 
     #  branches:
     #    - main
@@ -23,6 +24,7 @@ on:
   #pull_request: 
    #  types: [open, closed, assigned, reopened]
 
+
 jobs:         
   run-github-actions:
     runs-on: ubuntu-latest
@@ -30,7 +32,7 @@ jobs:
       - name: List Files
         run: |
            pwd
-           ls -a
+           ls -la
            echo $GITHUB_SHA
            echo $GITHUB_REPOSITORY
            echo $GITHUB_WORKSPACE
